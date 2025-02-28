@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vesmírná Arkáda Deluxe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.webp" type="image/x-icon">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="main-menu" class="menu">
+            <div class="game-logo">
+                <img src="icon.webp" alt="Logo hry" class="game-icon">
+                <h1>Vesmírná Arkáda Deluxe</h1>
+            </div>
+            <button id="start-game">Začít Hru</button>
+            <button id="show-controls">Ovládání</button>
+        </div>
+        <div id="controls-menu" class="menu hidden">
+            <h2>Ovládání</h2>
+            <ul>
+                <li>Pohyb: Šipky nebo WASD</li>
+                <li>Manuální střelba: Mezerník</li>
+                <li>Úhyb (dash): SHIFT + směr</li>
+                <li>Zrychlení: Shift + směr (s power-upem rychlosti)</li>
+                <li>Ultimátní schopnost: Q</li>
+                <li>Použít lékárničku: H</li>
+                <li>Pauza: P</li>
+            </ul>
+            
+            <h3>Power-ups</h3>
+            <div class="powerup-guide">
+                <div class="powerup-item">
+                    <div class="powerup-icon" style="background-color: #ffcc00;">W</div>
+                    <div class="powerup-desc">
+                        <strong>Weapon Upgrade</strong>: Zvyšuje úroveň vaší zbraně (max. úroveň 3)
+                    </div>
+                </div>
+                <div class="powerup-item">
+                    <div class="powerup-icon" style="background-color: #cc33ff;">L</div>
+                    <div class="powerup-desc">
+                        <strong>Laser</strong>: Laserová zbraň s vysokým poškozením
+                    </div>
+                </div>
+                <div class="powerup-item">
+                    <div class="powerup-icon" style="background-color: #00ffcc;">M</div>
+                    <div class="powerup-desc">
+                        <strong>Spread</strong>: Vícenásobná střela zasáhne více nepřátel
+                    </div>
+                </div>
+                <div class="powerup-item">
+                    <div class="powerup-icon" style="background-color: #3399ff;">S</div>
+                    <div class="powerup-desc">
+                        <strong>Shield</strong>: Ochranný štít na 10 sekund
+                    </div>
+                </div>
+                <div class="powerup-item">
+                    <div class="powerup-icon" style="background-color: #ff9900;">B</div>
+                    <div class="powerup-desc">
+                        <strong>Boost</strong>: Zvýšená rychlost pohybu na 10 sekund (Space + směr)
+                    </div>
+                </div>
+                <div class="powerup-item">
+                    <div class="powerup-icon" style="background-color: #ff5566;">H</div>
+                    <div class="powerup-desc">
+                        <strong>Heal</strong>: Lékárnička, která se uloží (max 3) a léčí 30 zdraví. Použij klávesou H.
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Tipy a Triky</h3>
+            <ul class="tips-list">
+                <li>Každá loď má jiné vlastnosti - vyberte si tu, která nejlépe odpovídá vašemu stylu.</li>
+                <li>Mezi vlnami se automaticky regeneruje malé množství zdraví.</li>
+                <li>Ultimátní schopnost vás dočasně učiní nezranitelným.</li>
+                <li>Nepřátelští bosové jsou silní, ale nabízejí velkou odměnu a šanci na power-up.</li>
+                <li>Dash (úhyb) je skvělý způsob, jak se vyhnout nepřátelským projektilům.</li>
+            </ul>
+            
+            <button id="back-button">Back</button>
+        </div>
+        <div id="game-over" class="menu hidden">
+            <h2>Game Over</h2>
+            <p id="final-score">Score: 0</p>
+            <p id="final-wave">Wave: 0</p>
+            <button id="restart-button">Play Again</button>
+            <button id="menu-button">Main Menu</button>
+        </div>
+        <div id="game-ui" class="hidden">
+            <div id="score-display">Score: 0</div>
+            <div id="lives-display">Lives: 3</div>
+            <div id="wave-display">Wave: 1</div>
+            <div id="ultimate-meter">Ultimate: 0%</div>
+            <div id="active-powerups"></div>
+        </div>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/weapons.js"></script>
+    <script src="js/powerups.js"></script>
+    <script src="js/enemies.js"></script>
+    <script src="js/skinshop.js"></script> <!-- Přidán chybějící skript -->
+    <script src="js/player.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
