@@ -79,3 +79,9 @@ Hra nabízí několik typů lodí s různými statistikami:
 ## O projektu
 
 Vesmírná Arkáda Deluxe je HTML5 hra vytvořená s použitím čistého JavaScriptu a Canvas API. Hra demonstruje implementaci klasických herních mechanik arkádových stříleček ve webovém prostředí.
+
+## Credits
+
+Vytvořil: [Jméno autora]
+Grafika: Vytvořena proceduálně pomocí Canvas
+Zvuky: [Zdroj zvuků]
